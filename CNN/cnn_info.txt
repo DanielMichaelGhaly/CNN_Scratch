@@ -1,0 +1,15 @@
+conv(I, K) = I 'star' rot180(K)
+where I is input Matrix and K is the Kernel
+and star is cross-correlation and * is the convolution
+
+2 types of cross-correlation: valid & full
+
+Y = I - K + 1 # each denote the width or height of matrix
+
+Convolutional Layer is a generalization of the Dense Layer.
+
+Analogy:
+
+Dense = Treat every pixel as unrelated, just throw them all into one big equation.
+
+Convolutional = Scan the image with small “pattern detectors” that look for the same thing everywhere.
