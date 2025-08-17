@@ -77,7 +77,3 @@ cd cnn-from-scratch
 pip install numpy
 python mnist_example.py
 
-
-📜 License
-
-MIT License — free to use, modify, and share.
