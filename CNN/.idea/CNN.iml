@@ -3,8 +3,7 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$" />
     <content url="file://$MODULE_DIR$/../../Neural_Network_Scratch/Neural-Network">
-      <sourceFolder url="file://$MODULE_DIR$/../../Neural_Network_Scratch/Neural-Network" isTestSource="false" />
-      <excludeFolder url="file://$MODULE_DIR$/../../Neural_Network_Scratch/Neural-Network/Neural-Network-Venv" />
+      <sourceFolder url="file://$MODULE_DIR$/../../Neural_Network_Scratch/Neural-Network/src" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

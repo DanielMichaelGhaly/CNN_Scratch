@@ -1,5 +1,5 @@
 import numpy as np
-from layer import Layer
+from neuralnetwork.layer import Layer
 
 # we need it because the result of a convolutional layer is a 3d block and usually the
 # last layer is a dense layer that operates on 2d blocks

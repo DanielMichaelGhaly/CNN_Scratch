@@ -1,12 +1,11 @@
 import numpy as np
 from keras.datasets import mnist
-import keras.utils
+from keras.utils import to_categorical
 
-from dense_layer import Dense
+from neuralnetwork.dense_layer import Dense
 from convolutional import Convolutional
 from reshape import Reshape
 from sigmoid_activation import Sigmoid
-from hyperbolic_tangent_activation import Tanh
 from bce import binary_cross_entropy, binary_cross_entropy_prime
 
 def preprocess_data(x, y, limit):
@@ -17,7 +16,7 @@ def preprocess_data(x, y, limit):
     x, y = x[all_indices], y[all_indices]
     x = x.reshape(len(x), 1, 28, 28)
     x = x.astype("float32") /255
-    y = keras.utils.np_utils.to_categorical(y)
+    y = to_categorical(y, num_classes=2)
     y = y.reshape(len(y), 2, 1)
     return x, y
 
@@ -52,14 +51,18 @@ for e in range(epochs):
 
         # backward propagation
         grad = binary_cross_entropy_prime(y, output)
-        for layer in network:
+        for layer in reversed(network):
             grad = layer.backward(grad, learning_rate)
     error /= len(x_train)
     print(f"{e + 1}/{epochs}, error={error}")
 
+count = 0
 # test
 for x, y in zip(x_test, y_test):
     output = x
     for layer in network:
         output = layer.forward(output)
     print(f"pred: {np.argmax(output)}, true: {np.argmax(y)}")
+    if(np.argmax(output)==np.argmax(y)):
+        count += 1
+print(f"{count} out of {len(x_test)} were correct")
