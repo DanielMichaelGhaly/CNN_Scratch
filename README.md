@@ -1,6 +1,6 @@
 # CNN_Scratch
 
-This project is a from-first-principles implementation of the core components of a Convolutional Neural Network (CNN) in pure Python.
+This project is a from-first-principles implementation of the core components of a Convolutional Neural Network (CNN) in pure Python with a solution of the MNIST problem using one-hot encoding with accuracty of around 99%.
 
 It reproduces and explains — step-by-step — how convolution operations, padding, strides, kernel flipping, forward pass, and backward pass work internally.
 To speed up development and focus on CNN logic, some base classes and helper functions were adapted from my earlier project: Neural_Network_Scratch.
