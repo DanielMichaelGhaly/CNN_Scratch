@@ -36,7 +36,7 @@ network = [
 ]
 
 epochs = 20
-learning_rate = 0.1
+learning_rate = 0.01
 
 # train
 for e in range(epochs):
